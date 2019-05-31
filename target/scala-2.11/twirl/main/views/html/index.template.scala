@@ -31,7 +31,7 @@ object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
 
 
 Seq[Any](format.raw/*2.1*/("""
-"""),_display_(/*3.2*/main("Welcome to Play")/*3.25*/ {_display_(Seq[Any](format.raw/*3.27*/("""
+"""),_display_(/*3.2*/main("Page Title")/*3.20*/ {_display_(Seq[Any](format.raw/*3.22*/("""
   """),format.raw/*4.3*/("""<h1>Welcome to Play!</h1>
 """)))}),format.raw/*5.2*/("""
 """))
@@ -50,10 +50,10 @@ Seq[Any](format.raw/*2.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Thu May 30 16:32:49 BRT 2019
+                  DATE: Fri May 31 11:04:56 BRT 2019
                   SOURCE: /home/adelsondias/Repos/example-play-akka/app/views/index.scala.html
-                  HASH: 101fa511ddebe89cb9bf324b96e228b7b59b8d04
-                  MATRIX: 941->1|1037->4|1064->6|1095->29|1134->31|1163->34|1219->61
+                  HASH: 67b937a05e54d20e5d952b2935d6a9ae54a65145
+                  MATRIX: 941->1|1037->4|1064->6|1090->24|1129->26|1158->29|1214->56
                   LINES: 28->1|33->2|34->3|34->3|34->3|35->4|36->5
                   -- GENERATED --
               */

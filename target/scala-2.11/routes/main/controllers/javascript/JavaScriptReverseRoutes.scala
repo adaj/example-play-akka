@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/adelsondias/Repos/example-play-akka/conf/routes
-// @DATE:Thu May 30 16:32:49 BRT 2019
+// @DATE:Fri May 31 11:11:35 BRT 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -19,32 +19,32 @@ package controllers.javascript {
     }
 
   
+    // @LINE:8
+    def sayHi: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.sayHi",
+      """
+        function(name0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "hi/" + (""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("name", name0)})
+        }
+      """
+    )
+  
+    // @LINE:7
+    def sayHello: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.sayHello",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "hello"})
+        }
+      """
+    )
+  
     // @LINE:6
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.index",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + """"})
-        }
-      """
-    )
-  
-  }
-
-  // @LINE:9
-  class ReverseAssets(_prefix: => String) {
-
-    def _defaultPrefix: String = {
-      if (_prefix.endsWith("/")) "" else "/"
-    }
-
-  
-    // @LINE:9
-    def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Assets.versioned",
-      """
-        function(file1) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[play.api.mvc.PathBindable[Asset]].javascriptUnbind + """)("file", file1)})
         }
       """
     )

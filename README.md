@@ -10,6 +10,6 @@ To make everything ready for development with Play and Akka in Eclipse, you'll s
     eclipse
     run
 
-This make take a while. After it, try to access localhost:9000 in your browser. Please add an issue to this repository if it doesn't work.
+This make take a while. After it, try to access localhost:9000 in your browser, and the routes available /hello and /hi/yourName.
 
-To access it in Eclipse, click File>Import>Gradle>Existing Gradle Project>Next>Browse [the repository folder]>Finish.
+To import the project to Eclipse, click File>Import>Gradle>Existing Gradle Project>Next>Browse [the repository folder]>Finish.

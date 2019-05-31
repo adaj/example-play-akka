@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/adelsondias/Repos/example-play-akka/conf/routes
-// @DATE:Thu May 30 16:32:49 BRT 2019
+// @DATE:Fri May 31 11:11:35 BRT 2019
 
 
 package router {
