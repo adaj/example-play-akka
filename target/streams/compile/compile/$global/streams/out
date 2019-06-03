@@ -1,2 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0m/home/adelsondias/Repos/example-play-akka/app/actors/HelloActor.java:26:1: non-static variable session cannot be referenced from a static context[0m
-[0m[[0m[31merror[0m] [0m[0m        ResultSet results = session.execute("SELECT * FROM users WHERE id = " + query.getUser());[0m
