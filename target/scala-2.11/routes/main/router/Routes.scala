@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/adelsondias/Repos/example-play-akka/conf/routes
-// @DATE:Fri May 31 11:11:35 BRT 2019
+// @DATE:Mon Jun 03 18:19:55 BRT 2019
 
 package router
 
@@ -38,6 +38,7 @@ class Routes(
     ("""GET""", this.prefix, """controllers.HomeController.index()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """hello""", """controllers.HomeController.sayHello()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """hi/""" + "$" + """name<.+>""", """controllers.HomeController.sayHi(name:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """requestinfo/""" + "$" + """name<.+>""", """controllers.HomeController.requestUser(name:String)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -99,6 +100,24 @@ class Routes(
     )
   )
 
+  // @LINE:9
+  private[this] lazy val controllers_HomeController_requestUser3_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("requestinfo/"), DynamicPart("name", """.+""",false)))
+  )
+  private[this] lazy val controllers_HomeController_requestUser3_invoker = createInvoker(
+    HomeController_0.requestUser(fakeValue[String]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "requestUser",
+      Seq(classOf[String]),
+      "GET",
+      this.prefix + """requestinfo/""" + "$" + """name<.+>""",
+      """""",
+      Seq()
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -118,6 +137,12 @@ class Routes(
     case controllers_HomeController_sayHi2_route(params@_) =>
       call(params.fromPath[String]("name", None)) { (name) =>
         controllers_HomeController_sayHi2_invoker.call(HomeController_0.sayHi(name))
+      }
+  
+    // @LINE:9
+    case controllers_HomeController_requestUser3_route(params@_) =>
+      call(params.fromPath[String]("name", None)) { (name) =>
+        controllers_HomeController_requestUser3_invoker.call(HomeController_0.requestUser(name))
       }
   }
 }

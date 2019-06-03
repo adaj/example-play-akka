@@ -6,6 +6,7 @@ import scala.compat.java8.FutureConverters;
 import javax.inject.*;
 import java.util.concurrent.CompletionStage;
 import actors.*;
+import messages.*;
 import static akka.pattern.Patterns.ask;
 
 /**
@@ -13,6 +14,7 @@ import static akka.pattern.Patterns.ask;
  * to the application's home page.
  */
 public class HomeController extends Controller {
+
     final ActorSystem actorSystem = ActorSystem.create("playakka");
     final ActorRef helloActor = actorSystem.actorOf(HelloActor.props("Akka"));
 
@@ -22,14 +24,22 @@ public class HomeController extends Controller {
 
     public CompletionStage<Result> sayHello() {
           return FutureConverters.toJava(
-              ask(helloActor, "Hello User", 1000))
+              ask(helloActor, "Hello User", 2000))
                   .thenApply(response -> ok(views.html.actor.render(response.toString())));
     }
 
     public CompletionStage<Result> sayHi(String name) {
           return FutureConverters.toJava(
-              ask(helloActor, "Hi "+name, 1000))
+              ask(helloActor, "Hi "+name, 2000))
                   .thenApply(response -> ok(views.html.actor.render(response.toString())));
     }
+
+    public CompletionStage<Result> requestUser(String name) {
+          MsgQuery query = new MsgQuery(name);
+          return FutureConverters.toJava(
+              ask(helloActor, query, 2000))
+                  .thenApply(response -> ok(views.html.actor.render(response.toString())));
+    }
+
 
 }

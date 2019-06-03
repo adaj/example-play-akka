@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, universal, universal-docs, universal-src, windows, docker, linux, rpm, debian, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool, docs"
-		date="20190530163155"/>
+		date="20190603181920"/>
 	<dependencies>
 		<module organisation="com.datastax.cassandra" name="cassandra-driver-mapping">
 			<revision name="3.6.0" status="release" pubdate="20180829120359" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="194">

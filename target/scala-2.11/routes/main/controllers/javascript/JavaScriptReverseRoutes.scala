@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/adelsondias/Repos/example-play-akka/conf/routes
-// @DATE:Fri May 31 11:11:35 BRT 2019
+// @DATE:Mon Jun 03 18:19:55 BRT 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -18,6 +18,16 @@ package controllers.javascript {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
+  
+    // @LINE:9
+    def requestUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.requestUser",
+      """
+        function(name0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "requestinfo/" + (""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("name", name0)})
+        }
+      """
+    )
   
     // @LINE:8
     def sayHi: JavaScriptReverseRoute = JavaScriptReverseRoute(

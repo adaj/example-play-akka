@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/adelsondias/Repos/example-play-akka/conf/routes
-// @DATE:Fri May 31 11:11:35 BRT 2019
+// @DATE:Mon Jun 03 18:19:55 BRT 2019
 
 import play.api.mvc.Call
 
@@ -17,6 +17,12 @@ package controllers {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
+  
+    // @LINE:9
+    def requestUser(name:String): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "requestinfo/" + implicitly[play.api.mvc.PathBindable[String]].unbind("name", name))
+    }
   
     // @LINE:8
     def sayHi(name:String): Call = {

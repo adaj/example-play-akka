@@ -50,7 +50,7 @@ Seq[Any](format.raw/*2.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri May 31 11:04:56 BRT 2019
+                  DATE: Mon Jun 03 18:19:56 BRT 2019
                   SOURCE: /home/adelsondias/Repos/example-play-akka/app/views/index.scala.html
                   HASH: 67b937a05e54d20e5d952b2935d6a9ae54a65145
                   MATRIX: 941->1|1037->4|1064->6|1090->24|1129->26|1158->29|1214->56
