@@ -34,14 +34,13 @@ public class HomeController extends Controller {
                   .thenApply(response -> ok(views.html.actor.render(response.toString())));
     }
 
-    // // Uncomment the code below for running without Cassandra (*AND UNCOMMENT THE RESPECTIVE ROUTE)
-    // final ActorRef dbActor = actorSystem.actorOf(DbActor.props());
-    // public CompletionStage<Result> requestUser(String name) {
-    //       MsgQuery query = new MsgQuery(name);
-    //       return FutureConverters.toJava(
-    //           ask(dbActor, query, 2000))
-    //               .thenApply(response -> ok(views.html.actor.render(response.toString())));
-    // }
+    // Uncomment the code below for running without Cassandra (*AND UNCOMMENT THE RESPECTIVE ROUTE)
+    final ActorRef dbActor = actorSystem.actorOf(DbActor.props());
+    public CompletionStage<Result> requestUser(String name) {
+          return FutureConverters.toJava(
+              ask(dbActor, Integer.parseInt(name), 2000))
+                  .thenApply(response -> ok(views.html.actor.render(response.toString())));
+    }
 
 
 }

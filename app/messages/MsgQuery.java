@@ -2,14 +2,14 @@ package messages;
 
 public final class MsgQuery {
 
-	 private String user;
+	 private Integer n;
 
-	 public MsgQuery(String name) {
-			user = name;
+	 public MsgQuery(Integer size) {
+			n = size;
 	 }
 
-	 public String getUser(){
-		 return user;
+	 public Integer getN(){
+		 return n;
 	 }
 
 }

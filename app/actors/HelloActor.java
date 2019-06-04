@@ -17,6 +17,9 @@ public class HelloActor extends AbstractActor {
 	                .match(String.class, s -> {
 										sender().tell(s+", I'm an actor!", self());
 									})
+                  .match(Integer.class, s -> {
+                    sender().tell(s+", I'm an actor!", self());
+                  })
 									.build();
 		}
 }
