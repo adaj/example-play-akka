@@ -12,6 +12,8 @@ To make everything ready for development using Eclipse, you'll still have to run
     eclipse
     run
 
-This make take a while. After it, try to access localhost:9000 in your browser, and the routes available /hello and /hi/yourName. To test Cassandra connection, you should access the route /requestinfo/0 and see some `test_name`.
+This make take a while. After it, try to access localhost:9000 in your browser, and the routes available `/hello` and `/hi/yourName`. To test Cassandra connection, you should access the route `/requestinfo/0` and see some `test_name`. 
+
+In this project, you can see how to use multiple actors to query a Cassandra table. Besides following the instructions on `installing_cassandra.md`, insert 5 more keys with respective names in order to see the result in the `/selectall` route.
 
 To import the project to Eclipse, click File>Import>Gradle>Existing Gradle Project>Next>Browse [the repository folder]>Finish.
