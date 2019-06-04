@@ -1,15 +1,15 @@
-2019-06-03 18:57:33,189 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-8 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2019-06-03 20:16:48,452 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-2 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2019-06-03 18:57:33,370 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-8 - Application started (Dev)
-2019-06-03 18:57:36,200 [ERROR] from application in application-akka.actor.default-dispatcher-5 - 
+2019-06-03 20:16:48,680 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-2 - Application started (Dev)
+2019-06-03 20:16:52,357 [ERROR] from application in application-akka.actor.default-dispatcher-4 - 
 
-! @7c4g4gbeb - Internal server error, for (GET) [/requestinfo/0] ->
+! @7c4gf117c - Internal server error, for (GET) [/requestinfo/1] ->
  
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[CompletionException: akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://playakka/user/$a#286705382]] after [2000 ms]. Message of type [messages.MsgQuery]. A typical reason for `AskTimeoutException` is that the recipient actor didn't send a reply.]]
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[CompletionException: akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://playakka/user/$b#556692651]] after [2000 ms]. Message of type [messages.MsgQuery]. A typical reason for `AskTimeoutException` is that the recipient actor didn't send a reply.]]
 	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:251)
 	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:176)
 	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:382)
@@ -29,7 +29,7 @@ play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[Completio
 	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
 	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
 	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.util.concurrent.CompletionException: akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://playakka/user/$a#286705382]] after [2000 ms]. Message of type [messages.MsgQuery]. A typical reason for `AskTimeoutException` is that the recipient actor didn't send a reply.
+Caused by: java.util.concurrent.CompletionException: akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://playakka/user/$b#556692651]] after [2000 ms]. Message of type [messages.MsgQuery]. A typical reason for `AskTimeoutException` is that the recipient actor didn't send a reply.
 	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
 	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
 	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:593)
@@ -60,23 +60,23 @@ Caused by: java.util.concurrent.CompletionException: akka.pattern.AskTimeoutExce
 	at akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:283)
 	at akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:235)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://playakka/user/$a#286705382]] after [2000 ms]. Message of type [messages.MsgQuery]. A typical reason for `AskTimeoutException` is that the recipient actor didn't send a reply.
+Caused by: akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://playakka/user/$b#556692651]] after [2000 ms]. Message of type [messages.MsgQuery]. A typical reason for `AskTimeoutException` is that the recipient actor didn't send a reply.
 	at akka.pattern.PromiseActorRef$$anonfun$2.apply(AskSupport.scala:635)
 	at akka.pattern.PromiseActorRef$$anonfun$2.apply(AskSupport.scala:635)
 	at akka.pattern.PromiseActorRef$$anonfun$1.apply$mcV$sp(AskSupport.scala:648)
 	... 9 common frames omitted
-2019-06-03 19:02:23,019 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-13 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2019-06-03 20:17:48,543 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-9 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2019-06-03 19:02:23,055 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-13 - Application started (Dev)
-2019-06-03 19:02:25,110 [ERROR] from application in application-akka.actor.default-dispatcher-4 - 
+2019-06-03 20:17:48,563 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-9 - Application started (Dev)
+2019-06-03 20:17:48,604 [ERROR] from application in application-akka.actor.default-dispatcher-4 - 
 
-! @7c4g56mod - Internal server error, for (GET) [/requestinfo/0] ->
+! @7c4gf46d2 - Internal server error, for (GET) [/requestinfo/1] ->
  
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[CompletionException: akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://playakka/user/$a#1043097184]] after [2000 ms]. Message of type [messages.MsgQuery]. A typical reason for `AskTimeoutException` is that the recipient actor didn't send a reply.]]
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[CompletionException: akka.pattern.AskTimeoutException: Recipient [Actor[akka://playakka/user/$b#-602356981]] had already been terminated. Message of type [messages.MsgQuery].]]
 	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:251)
 	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:176)
 	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:382)
@@ -96,113 +96,115 @@ play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[Completio
 	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
 	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
 	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.util.concurrent.CompletionException: akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://playakka/user/$a#1043097184]] after [2000 ms]. Message of type [messages.MsgQuery]. A typical reason for `AskTimeoutException` is that the recipient actor didn't send a reply.
+Caused by: java.util.concurrent.CompletionException: akka.pattern.AskTimeoutException: Recipient [Actor[akka://playakka/user/$b#-602356981]] had already been terminated. Message of type [messages.MsgQuery].
 	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
 	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
 	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:593)
 	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
-	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:474)
-	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1977)
-	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:21)
-	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:18)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:36)
-	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
-	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
-	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
-	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
-	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
-	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601)
-	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
-	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:44)
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:252)
-	at akka.pattern.PromiseActorRef$$anonfun$1.apply$mcV$sp(AskSupport.scala:644)
-	at akka.actor.Scheduler$$anon$4.run(Scheduler.scala:205)
-	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601)
-	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:109)
-	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599)
-	at akka.actor.LightArrayRevolverScheduler$TaskHolder.executeTask(LightArrayRevolverScheduler.scala:328)
-	at akka.actor.LightArrayRevolverScheduler$$anon$4.executeBucket$1(LightArrayRevolverScheduler.scala:279)
-	at akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:283)
-	at akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:235)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://playakka/user/$a#1043097184]] after [2000 ms]. Message of type [messages.MsgQuery]. A typical reason for `AskTimeoutException` is that the recipient actor didn't send a reply.
-	at akka.pattern.PromiseActorRef$$anonfun$2.apply(AskSupport.scala:635)
-	at akka.pattern.PromiseActorRef$$anonfun$2.apply(AskSupport.scala:635)
-	at akka.pattern.PromiseActorRef$$anonfun$1.apply$mcV$sp(AskSupport.scala:648)
-	... 9 common frames omitted
-2019-06-03 19:02:51,315 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-15 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+	at java.util.concurrent.CompletableFuture.uniApplyStage(CompletableFuture.java:617)
+	at java.util.concurrent.CompletableFuture.thenApplyAsync(CompletableFuture.java:1988)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenApply(FutureConvertersImpl.scala:27)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenApply(FutureConvertersImpl.scala:18)
+	at controllers.HomeController.requestUser(HomeController.java:43)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(Routes.scala:145)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(Routes.scala:145)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:137)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$8$$anon$2$$anon$1.invocation(HandlerInvoker.scala:108)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:88)
+	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:31)
+	at play.core.j.JavaAction$$anonfun$9.apply(JavaAction.scala:138)
+	at play.core.j.JavaAction$$anonfun$9.apply(JavaAction.scala:138)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
+	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
+	at scala.concurrent.impl.Future$.apply(Future.scala:31)
+	at scala.concurrent.Future$.apply(Future.scala:494)
+	at play.core.j.JavaAction.apply(JavaAction.scala:138)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:96)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:89)
+	at play.api.libs.streams.StrictAccumulator$$anonfun$mapFuture$2$$anonfun$1.apply(Accumulator.scala:174)
+	at play.api.libs.streams.StrictAccumulator$$anonfun$mapFuture$2$$anonfun$1.apply(Accumulator.scala:174)
+	at scala.util.Try$.apply(Try.scala:192)
+	at play.api.libs.streams.StrictAccumulator$$anonfun$mapFuture$2.apply(Accumulator.scala:174)
+	at play.api.libs.streams.StrictAccumulator$$anonfun$mapFuture$2.apply(Accumulator.scala:170)
+	at scala.Function1$$anonfun$andThen$1.apply(Function1.scala:52)
+	at scala.Function1$$anonfun$andThen$1.apply(Function1.scala:52)
+	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:207)
+	at play.core.server.AkkaHttpServer$$anonfun$14.apply(AkkaHttpServer.scala:376)
+	at play.core.server.AkkaHttpServer$$anonfun$14.apply(AkkaHttpServer.scala:374)
+	at akka.http.scaladsl.util.FastFuture$.akka$http$scaladsl$util$FastFuture$$strictTransform$1(FastFuture.scala:41)
+	at akka.http.scaladsl.util.FastFuture$$anonfun$transformWith$extension1$1.apply(FastFuture.scala:51)
+	at akka.http.scaladsl.util.FastFuture$$anonfun$transformWith$extension1$1.apply(FastFuture.scala:50)
+	... 13 common frames omitted
+Caused by: akka.pattern.AskTimeoutException: Recipient [Actor[akka://playakka/user/$b#-602356981]] had already been terminated. Message of type [messages.MsgQuery].
+	at akka.pattern.AskableActorRef$.recipientTerminatedExcpetion(AskSupport.scala:288)
+	at akka.pattern.AskableActorRef$.internalAsk$extension(AskSupport.scala:330)
+	at akka.pattern.AskSupport$class.ask(AskSupport.scala:81)
+	at akka.pattern.package$.ask(package.scala:42)
+	at akka.pattern.Patterns$.ask(Patterns.scala:118)
+	at akka.pattern.Patterns.ask(Patterns.scala)
+	at controllers.HomeController.requestUser(HomeController.java:42)
+	... 44 common frames omitted
+2019-06-03 20:28:32,521 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-11 - 
 
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2019-06-03 19:02:51,351 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-15 - Application started (Dev)
-2019-06-03 19:02:53,434 [ERROR] from application in application-akka.actor.default-dispatcher-3 - 
-
-! @7c4g58cln - Internal server error, for (GET) [/requestinfo/0] ->
+! @7c4ggemi1 - Internal server error, for (GET) [/requestinfo/1] ->
  
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[CompletionException: akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://playakka/user/$a#-621205378]] after [2000 ms]. Message of type [messages.MsgQuery]. A typical reason for `AskTimeoutException` is that the recipient actor didn't send a reply.]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:251)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:176)
-	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:382)
-	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:380)
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:346)
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:345)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:36)
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:44)
+play.sbt.PlayExceptions$CompilationException: Compilation error[cannot find symbol
+  symbol:   class AuthenticationException
+  location: class actors.DbActor]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
+	at scala.Option.map(Option.scala:146)
+	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:33)
+	at scala.Option.map(Option.scala:146)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:28)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:24)
+	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:51)
+	at scala.util.Either$LeftProjection.map(Either.scala:569)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:51)
+	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:76)
+	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:412)
+	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:50)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:55)
+	at play.runsupport.Reloader.reload(Reloader.scala:412)
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1.get(DevServerStart.scala:123)
+	at play.core.server.AkkaHttpServer.play$core$server$AkkaHttpServer$$handleRequest(AkkaHttpServer.scala:241)
+	at play.core.server.AkkaHttpServer$$anonfun$4.apply(AkkaHttpServer.scala:138)
+	at play.core.server.AkkaHttpServer$$anonfun$4.apply(AkkaHttpServer.scala:138)
+	at akka.stream.impl.fusing.MapAsyncUnordered$$anon$26.onPush(Ops.scala:1304)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:519)
+	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:482)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:378)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:588)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:472)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:563)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:745)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:760)
+	at akka.actor.Actor$class.aroundReceive(Actor.scala:517)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:670)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:588)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:557)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:258)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:225)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:235)
 	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
 	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
 	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
 	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.util.concurrent.CompletionException: akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://playakka/user/$a#-621205378]] after [2000 ms]. Message of type [messages.MsgQuery]. A typical reason for `AskTimeoutException` is that the recipient actor didn't send a reply.
-	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
-	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
-	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:593)
-	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
-	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:474)
-	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1977)
-	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:21)
-	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:18)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:36)
-	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
-	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
-	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
-	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
-	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
-	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601)
-	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
-	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:44)
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:252)
-	at akka.pattern.PromiseActorRef$$anonfun$1.apply$mcV$sp(AskSupport.scala:644)
-	at akka.actor.Scheduler$$anon$4.run(Scheduler.scala:205)
-	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601)
-	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:109)
-	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599)
-	at akka.actor.LightArrayRevolverScheduler$TaskHolder.executeTask(LightArrayRevolverScheduler.scala:328)
-	at akka.actor.LightArrayRevolverScheduler$$anon$4.executeBucket$1(LightArrayRevolverScheduler.scala:279)
-	at akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:283)
-	at akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:235)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://playakka/user/$a#-621205378]] after [2000 ms]. Message of type [messages.MsgQuery]. A typical reason for `AskTimeoutException` is that the recipient actor didn't send a reply.
-	at akka.pattern.PromiseActorRef$$anonfun$2.apply(AskSupport.scala:635)
-	at akka.pattern.PromiseActorRef$$anonfun$2.apply(AskSupport.scala:635)
-	at akka.pattern.PromiseActorRef$$anonfun$1.apply$mcV$sp(AskSupport.scala:648)
-	... 9 common frames omitted
-2019-06-03 19:03:32,101 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-11 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2019-06-03 20:29:36,050 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-13 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2019-06-03 19:03:32,127 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-11 - Application started (Dev)
+2019-06-03 20:29:36,104 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-13 - Application started (Dev)
+2019-06-03 20:29:59,382 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-15 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2019-06-03 20:29:59,422 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-15 - Application started (Dev)

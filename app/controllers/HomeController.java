@@ -16,7 +16,7 @@ import static akka.pattern.Patterns.ask;
 public class HomeController extends Controller {
 
     final ActorSystem actorSystem = ActorSystem.create("playakka");
-    final ActorRef helloActor = actorSystem.actorOf(HelloActor.props("Akka"));
+    final ActorRef helloActor = actorSystem.actorOf(HelloActor.props());
 
     public Result index() {
         return ok(views.html.index.render());
@@ -34,12 +34,14 @@ public class HomeController extends Controller {
                   .thenApply(response -> ok(views.html.actor.render(response.toString())));
     }
 
-    public CompletionStage<Result> requestUser(String name) {
-          MsgQuery query = new MsgQuery(name);
-          return FutureConverters.toJava(
-              ask(helloActor, query, 2000))
-                  .thenApply(response -> ok(views.html.actor.render(response.toString())));
-    }
+    // // Uncomment the code below for running without Cassandra (*AND UNCOMMENT THE RESPECTIVE ROUTE)
+    // final ActorRef dbActor = actorSystem.actorOf(DbActor.props());
+    // public CompletionStage<Result> requestUser(String name) {
+    //       MsgQuery query = new MsgQuery(name);
+    //       return FutureConverters.toJava(
+    //           ask(dbActor, query, 2000))
+    //               .thenApply(response -> ok(views.html.actor.render(response.toString())));
+    // }
 
 
 }
