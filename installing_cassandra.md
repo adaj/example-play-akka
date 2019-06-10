@@ -16,7 +16,7 @@
 
 ## b. To create a keyspace and a table for this project
 
-6 - cqlsh> CREATE KEYSPACE example_play;
+6 - cqlsh> CREATE KEYSPACE example_play WITH replication = {'class': 'SimpleStrategy', 'replication_factor' : 3};
 
 7 - cqlsh> USE example_play;
 

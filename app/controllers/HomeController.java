@@ -18,6 +18,7 @@ public class HomeController extends Controller {
     final ActorSystem actorSystem = ActorSystem.create("playakka");
     final ActorRef helloActor = actorSystem.actorOf(HelloActor.props());
 
+
     public Result index() {
         return ok(views.html.index.render());
     }
@@ -33,6 +34,14 @@ public class HomeController extends Controller {
               ask(helloActor, "Hi "+name, 2000))
                   .thenApply(response -> ok(views.html.actor.render(response.toString())));
     }
+
+    final ActorRef sparkActor = actorSystem.actorOf(SparkActor.props());
+    public CompletionStage<Result> sparkHello() {
+          return FutureConverters.toJava(
+              ask(sparkActor, "Hi ", 2000))
+                  .thenApply(response -> ok(views.html.actor.render(response.toString())));
+    }
+
 
     // Uncomment the code below for running without Cassandra (*AND UNCOMMENT THE RESPECTIVE ROUTE)
     final ActorRef dbActor = actorSystem.actorOf(DbActor.props());

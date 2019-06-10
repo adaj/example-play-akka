@@ -4,7 +4,9 @@ Hi! This is a "hello-world" template to use [Play](https://www.playframework.com
 
 Feel free to fork this project, but in order for you to use it, you will need to [install sbt](https://www.scala-sbt.org/download.html).
 
-The newest version of this project also set a Cassandra database to illustrate how it can easily be integrated. To install Cassandra, please follow the instructions on `installing_cassandra.md` file in this repository.
+NEW! This project also set a Cassandra database to illustrate how it can easily be integrated. To install Cassandra, please follow the instructions on `installing_cassandra.md` file in this repository.
+
+NEW! We added the Spark integration to this project. You need to follow the instructions on `installing_spark.md` to download it properly.
 
 To make everything ready for development using Eclipse, you'll still have to run the following commands in the root directory of this repository.
 

@@ -12,3 +12,6 @@ GET     /requestinfo/*name    controllers.HomeController.requestUser(name)
 
 # Example of supervision+routing
 GET     /selectall            controllers.MasterController.selectAll()
+
+# Spark test
+GET	/spark		      controllers.HomeController.sparkHello()

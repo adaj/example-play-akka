@@ -45,7 +45,7 @@ public class MasterActor extends AbstractActor {
       return receiveBuilder()//
                   .match(MsgQuery.class, s -> {
                     for (int i=0; i < s.getN(); i++) {
-                        router.route(i, getSender()); //mandar pra um aggregator
+                        router.route(i, getSender()); 
                     }
                   })
                   .match(String.class, s -> {
